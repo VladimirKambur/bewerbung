@@ -1,0 +1,13 @@
+.menu {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  color: #E6F1FF;
+}
+
+.border {
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, #E6F1FF 50%, #E6F1FF 50%, transparent 100%);
+  margin-bottom: 20px;
+}

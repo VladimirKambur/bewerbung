@@ -1,0 +1,19 @@
+
+<div class="container">
+  <b-header (menuToggle)="rotateY($event)"></b-header>
+  <div class="carousel" #carousel>
+    <div class="carousel-container" [style.transform]="'rotateY(' + (-currentIndex() * theta) + 'deg)'">
+      <div #carouselItem class="carousel-item" [style.transform]="'rotateY(' + 0 + 'deg) translateZ('+ radius() +'px)'">
+        <foto></foto>
+      </div>
+      <div class="carousel-item" [style.transform]="'rotateY(' + theta + 'deg) translateZ('+ radius() +'px)'">
+        <foto></foto>
+      </div>
+      <div class="carousel-item" [style.transform]="'rotateY(' + (2 * theta) + 'deg) translateZ('+ radius() +'px)'">
+        <foto></foto>
+      </div>
+    </div>
+  </div>
+</div>
+
+<router-outlet/>
