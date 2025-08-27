@@ -1,0 +1,17 @@
+.info {
+
+  position: relative;
+  display: inline-block;
+  background: #faf9fd;
+  width: 20%;
+
+  img {
+    display: block;
+    width: -webkit-fill-available;
+    //width: 6vw;
+    mask-image: radial-gradient(circle at 33% 0%, black 70%, transparent 90%);
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: cover;
+  }
+}

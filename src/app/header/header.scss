@@ -4,6 +4,21 @@
   justify-content: center;
   gap: 30px;
   color: #E6F1FF;
+
+  .button {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 10px;
+
+    &:hover {
+      border-bottom: 1px solid #fff;
+    }
+  }
+
+  .active {
+    color: #fff;
+  }
 }
 
 .border {

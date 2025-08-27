@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="carousel" [style.transform]="'rotateY(' + currentAngle + 'deg)'">
+
+    <div class="item" #carouselItem [style.transform]="getTransform(0)" (click)="itemClicked(0)">
+      <cover-letter></cover-letter>
+    </div>
+    <div class="item" #carouselItem [style.transform]="getTransform(1)" (click)="itemClicked(1)">
+      <cv></cv>
+    </div>
+    <div class="item" #carouselItem [style.transform]="getTransform(2)" (click)="itemClicked(2)">
+      <cover-letter></cover-letter>
+    </div>
+    <div class="item" #carouselItem [style.transform]="getTransform(3)" (click)="itemClicked(3)">
+      <cover-letter></cover-letter>
+    </div>
+    <div class="item" #carouselItem [style.transform]="getTransform(4)" (click)="itemClicked(4)">
+      <cover-letter></cover-letter>
+    </div>
+    <div class="item" #carouselItem [style.transform]="getTransform(5)" (click)="itemClicked(5)">
+      <cover-letter></cover-letter>
+    </div>
+
+  </div>
+</div>
