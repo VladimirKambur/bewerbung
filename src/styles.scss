@@ -1,5 +1,5 @@
 @use 'app-styles';
-
+@use 'app-vars' as var;
 // Include theming for Angular Material with `mat.theme()`.
 // This Sass mixin will define CSS variables that are used for styling Angular Material
 // components according to the Material 3 design spec.
@@ -39,3 +39,13 @@ body {
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-mdc-card-outlined, .mat-mdc-dialog-surface{
+border-radius: 0 !important;
+}
+
+/*.mdc-dialog__surface {
+  max-width: 90vw !important;
+  width: 90vw !important;
+  margin: 0 auto;
+}*/

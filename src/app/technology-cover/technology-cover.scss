@@ -1,0 +1,18 @@
+@use '../../app-vars' as var;
+.tech-card {
+
+  background: linear-gradient(to top right, var.$bg-grey 0%, var.$bg-white 60%,);
+  height: 100%;
+
+  .company-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2vw;
+
+    .icon {
+      width: 5vw;
+      height: auto;
+    }
+  }
+}

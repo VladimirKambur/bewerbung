@@ -192,9 +192,9 @@
     lmdb "3.4.1"
 
 "@angular/cdk@^20.1.5":
-  version "20.1.5"
-  resolved "https://registry.npmjs.org/@angular/cdk/-/cdk-20.1.5.tgz"
-  integrity sha512-uJezXaVPAbumxTCv5JA7oIuWCgPlz9/Fj6dJl6bxcRD7DfMyHGq3dtoLhthuU/uk+OfK0FlTklR92Yss5frFUw==
+  version "20.2.1"
+  resolved "https://registry.npmjs.org/@angular/cdk/-/cdk-20.2.1.tgz"
+  integrity sha512-yEPh5hr9LZW4ey/HxtaGdSBDIkNzziLo0Dr1RP8JcxhOQ2Bzv2PZ+g8jC6aPGD7NPV8FtDf0FhTEzQr+m+gBXQ==
   dependencies:
     parse5 "^8.0.0"
     tslib "^2.3.0"
@@ -266,10 +266,10 @@
   dependencies:
     tslib "^2.3.0"
 
-"@angular/material@^20.1.5":
-  version "20.1.5"
-  resolved "https://registry.npmjs.org/@angular/material/-/material-20.1.5.tgz"
-  integrity sha512-Kce3rjQEblkX6gb6RH8Fefm0cFxXsM7d/bTCu3syCQiy4F0BUv4OGyThIkiWztVwVtg/E9IeYotoftCyydFJLQ==
+"@angular/material@^20.2.1":
+  version "20.2.1"
+  resolved "https://registry.npmjs.org/@angular/material/-/material-20.2.1.tgz"
+  integrity sha512-Zv1ay/eSwO9e2xUrPKOQFSKscb0+0bhZmDwy9etQhder0FBh380iizP+PaZnJGGy87zYDmauv0fjKcDfdWCJYA==
   dependencies:
     tslib "^2.3.0"
 
@@ -3137,6 +3137,13 @@ negotiator@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/negotiator/-/negotiator-1.0.0.tgz"
   integrity sha512-8Ofs/AUQh8MaEcrlq5xOX0CQ9ypTF5dl78mjlMNfOK08fzpgTHQRQPBxcPlEtIw0yRpws+Zo/3r+5WRby7u3Gg==
+
+ngx-extended-pdf-viewer@^25.5.0:
+  version "25.5.0"
+  resolved "https://registry.yarnpkg.com/ngx-extended-pdf-viewer/-/ngx-extended-pdf-viewer-25.5.0.tgz#d5a9311343da947bfe0b33947bb750fa22770bd0"
+  integrity sha512-xELaIhrchirKqqWxBJCaWJdGYGFudHjrqhUtfRkQ9n56ZR6oh9+P25qgmN7wnwuve3upOCKWHErc6YWDDfQWXA==
+  dependencies:
+    tslib "^2.3.0"
 
 node-addon-api@^6.1.0:
   version "6.1.0"

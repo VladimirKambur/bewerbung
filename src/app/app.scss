@@ -1,5 +1,16 @@
 .container {
-  width: 60%;
-  margin: 0 auto;
+  //width: 60%;
+  //margin: 0 auto;
   height: 100%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+
+  .booklet{
+    width: 60%;
+    //height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }

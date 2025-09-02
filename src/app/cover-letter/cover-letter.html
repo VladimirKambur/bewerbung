@@ -1,7 +1,35 @@
 <mat-card class="card" appearance="outlined">
   <mat-card-content>
-    <div class="info">
-      <img src="/test/foto.png" class="foto">
+    <div class="header">
+      <div style="width: 30%;">
+        <div class="photo">
+          <img src="/png/foto.png" class="foto">
+        </div>
+      </div>
+      <div class="info">
+        <div class="mail">
+          <mat-icon svgIcon="mail"/>
+          {{ 'vladimir.kambur@googlemail.com' }}
+        </div>
+
+        <div class="mobile">
+          <mat-icon svgIcon="mobile"/>+49 162 6053301
+        </div>
+
+        <div class="call">
+          <mat-icon svgIcon="call"/>+49 89 18912588
+        </div>
+
+        <div class="social">
+          <a href="https://www.xing.com/profile/Vladimir_Kambur/web_profiles" target="_blank" rel="noopener noreferrer">
+            <mat-icon svgIcon="xing"/>
+          </a>
+          <a href="https://www.linkedin.com/in/vladimir-kambur-743b75128/" target="_blank" rel="noopener noreferrer">
+            <mat-icon svgIcon="linkedin"/>
+          </a>
+        </div>
+
+      </div>
     </div>
   </mat-card-content>
 </mat-card>

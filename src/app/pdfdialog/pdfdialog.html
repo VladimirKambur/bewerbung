@@ -1,0 +1,14 @@
+<div class="dialog">
+
+  @if (fileUrl) {
+    <ngx-extended-pdf-viewer
+      [src]="fileUrl"
+      [height]="'90vh'"
+      backgroundColor="#ffffff"
+      [handTool]="false"
+      zoom="page-width"
+    >
+    </ngx-extended-pdf-viewer>
+  }
+
+</div>

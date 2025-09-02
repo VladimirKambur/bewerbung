@@ -14,11 +14,12 @@ import {CV} from '../cv/cv';
 export class Resume implements OnChanges {
   anglePerItem = 360 / 6;
 
-  @ViewChildren('carouselItem') carouselItems!: QueryList<ElementRef>;
+  @ViewChildren('carouselItem', { read: ElementRef }) carouselItems!: QueryList<ElementRef>;
   @Input() activeCard: number = 0;
 
   currentAngle = 0;
 
+  private itemFullSize = false;
   private translateZValue = 400;
 
   ngOnChanges(changes: SimpleChanges) {
@@ -34,9 +35,10 @@ export class Resume implements OnChanges {
 
   itemClicked(index: number) {
     if (this.activeCard === index) {
-      this.carouselItems.forEach((item, i) => {
+      this.carouselItems.forEach((item: ElementRef, i) => {
         if (i === index) {
           item.nativeElement.classList.add('active');
+          this.itemFullSize = true;
         } else {
           item.nativeElement.classList.remove('active');
         }
@@ -45,8 +47,11 @@ export class Resume implements OnChanges {
   }
 
   private deactiveAll() {
-    this.carouselItems.forEach((item) => {
-      item.nativeElement.classList.remove('active');
-    });
+    if(this.itemFullSize) {
+      this.carouselItems.forEach((item) => {
+        item.nativeElement.classList.remove('active');
+      });
+      this.itemFullSize = false;
+    }
   }
 }

@@ -1,0 +1,85 @@
+@use '../../app-vars' as var;
+
+.card {
+  border-radius: 0 !important;
+  background-image: url("/png/foto2.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .card-content {
+    padding: 0 !important;
+    position: relative;
+    height: 100%;
+
+    .info {
+      top: 1vh;
+      width: 100%;
+
+      .name {
+        text-align: center;
+        font-size: 3vw;
+        font-weight: bold;
+        line-height: 1.2;
+      }
+
+      .prof {
+        margin-top: 1vh;
+        text-align: center;
+        font-size: 1vw;
+      }
+    }
+
+    .disc{
+      top: 18vh;
+      right: 0.5vw;
+      font-size: 0.9vw;
+      display: flex;
+      flex-direction: column;
+      gap: 2vh;
+      div{
+        line-height: 1.2;
+        display: flex;
+        justify-content: right;
+      }
+    }
+
+    .info {
+      position: absolute;
+      color: var.$bg-white;
+      text-shadow:
+        -1px -1px 0 var.$blue-color,
+        1px -1px 0 var.$blue-color,
+        -1px  1px 0 var.$blue-color,
+        1px  1px 0 var.$blue-color;
+    }
+
+    .disc{
+      position: absolute;
+      color: black;
+      /*text-shadow: -1px -1px 0 var.$bg-white,
+      1px -1px 0 var.$bg-white,
+      -1px 1px 0 var.$bg-white,
+      1px 1px 0 var.$bg-white;*/
+    }
+
+    .open {
+      position: absolute;
+      top: 40%;
+      right: 0;
+
+      background: #7d7f7d;
+      border: 1px solid var.$bg-white;
+      color: var.$bg-white;
+      border-right: none;
+
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+}

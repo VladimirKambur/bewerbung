@@ -1,5 +1,128 @@
-<mat-card class="card" appearance="outlined">
-  <mat-card-content>
-    Lebenslauf
+<mat-card class="cv-card" appearance="outlined">
+  <mat-card-header class="header">
+    <div class="button" [class.active]="activeType() == type.JOB" (click)="setActiveType(type.JOB)">
+      Berufspraxis
+    </div>
+    <div class="button" [class.active]="activeType() == type.SCHOOL" (click)="setActiveType(type.SCHOOL)">
+      Bildungsweg
+    </div>
+  </mat-card-header>
+  <mat-card-content class="cv-content">
+
+    @if (activeType() === type.JOB) {
+
+      <div #tl_job class="timeline">
+
+        <div class="info-card">
+          <div class="info">
+            <div class="date">07/2023</div>
+            <h3 class="title">Mobile und Frontend Developer</h3>
+            <ul>
+              <li>Mobile Entwickler mit Flutter</li>
+              <li>Frontend Developer ( Angular 8+, AngularJs, Scss, HTML, Typescript, JavaScript)</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <div class="info">
+            <div class="date">11/2016 <br> - <br>07/2023</div>
+            <h3 class="title">Mobile und Frontend Developer</h3>
+            <ul>
+              <li>
+                Hybrid mobile app mit DevExtreme, Angular, BreezJS, HTML, Css, TypeScript, Cordova
+              </li>
+              <li>
+                SPFx (SharePoint-Framework) mit ReactJS, Scss, TypeScript Microsoft teams bot mit ReactJS, Scss,
+                TypeScript
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <div class="info">
+            <div class="date">08/2013<br> - <br>09/2016</div>
+            <h3 class="title">Fachinformatiker Anwendungsentwicklung </h3>
+            <ul>
+              <li>Software development mit Gupta 3.1 und 6.1 Webentwicklung mit C# MVC, JQuery, Ajax,
+                JavaScript, HTML, Css
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+    } @else {
+
+      <div #tl_school class="timeline">
+        <div class="info-card">
+          <div class="info">
+            <div class="date">07/2011<br> - <br>07/2013</div>
+            <h3 class="title">Ausbildung zur Fachinformatiker Anwendungsentwicklung</h3>
+            <div>
+              Frevel & Fey GmbH<br>
+              Abschluss: erfolgreich abgeschlossen
+            </div>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <div class="info">
+            <div class="date">10/2008<br> - <br>10/2010</div>
+            <h3 class="title">Staatlich anerkannte Berufsfachschule für Industrietechnologen und
+              technische Assistenten für Informatik in München
+            </h3>
+            <div>Abschluss: Staatlich geprüfter Technischer Assistent für Informatik </div>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <div class="info">
+            <div class="date">09/2005<br> - <br>02/2007</div>
+            <h3 class="title">Technische Fachoberschule München</h3>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <div class="info">
+            <div class="date">09/2004<br> - <br>07/2005</div>
+            <h3 class="title">Volkshochschule zur Mittleren Reife</h3>
+            <div>Abschluss: Mittlere Reife</div>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <div class="info">
+            <div class="date">09/2003<br> - <br>07/2004</div>
+            <h3 class="title">Elly-Heuss-Realschule, München</h3>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <div class="info">
+            <div class="date">09/2001<br> - <br>07/2003</div>
+            <h3 class="title">Gisela-Gymnasium, München</h3>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <div class="info">
+            <div class="date">09/1995<br> - <br>06/2001</div>
+            <h3 class="title">Realschule, Birobidshan</h3>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <div class="info">
+            <div class="date">09/1992<br> - <br>06/1995</div>
+            <h3 class="title">Grundschule, Birobidshan</h3>
+          </div>
+        </div>
+
+      </div>
+
+    }
   </mat-card-content>
 </mat-card>

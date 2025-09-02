@@ -1,0 +1,21 @@
+<div class="booklet-container">
+  <div class="first-page"
+       [style.transform]="'rotateY(' + (isOpenFirst() ? -180 : 0) + 'deg)'"
+       [style.transition]="'transform 500ms ease-in-out'"
+       [style.transform-origin]="'left center'">
+    <booklet-cover class="booklet-cover" (open)="toggle(true)"/>
+    <cover-letter class="cover-letter"/>
+  </div>
+
+  <div class="second-page">
+    <cv/>
+  </div>
+
+  <div class="third-page"
+       [style.transform]="'rotateY(' + (isOpenThird() ? 180 : 0) + 'deg)'"
+       [style.transition]="'transform 500ms ease-in-out'"
+       [style.transform-origin]="'right center'">
+    <technology-cover class="technology-cover" />
+    <certificates class="certificates" (close)="toggle(false)"/>
+  </div>
+</div>

@@ -1,17 +1,103 @@
-.info {
+@use '../../app-vars' as var;
 
-  position: relative;
-  display: inline-block;
-  background: #faf9fd;
-  width: 20%;
+.card {
+  container-type: inline-size;
+  /*background: linear-gradient(to right,
+    #faf9fd 0%,
+    #faf9fd 90%,
+    rgba(0, 0, 0, 0.01) 200%
+  );
+*/
 
-  img {
-    display: block;
-    width: -webkit-fill-available;
-    //width: 6vw;
-    mask-image: radial-gradient(circle at 33% 0%, black 70%, transparent 90%);
-    mask-repeat: no-repeat;
-    mask-position: center;
-    mask-size: cover;
+  background: linear-gradient(to top left, var.$bg-grey 0%, var.$bg-white 60%, );
+
+  .header {
+    margin-top: 4em;
+    display: flex;
+    width: 100%;
+    gap: 1em;
+
+    .name, .prof {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 0 20px;
+      flex-grow: 1;
+      font-size: 3em;
+      line-height: 1.2;
+      transition: font-size 1.2s ease;
+    }
+
+    .info {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      justify-content: center;
+
+      .mail, .mobile, .call {
+        display: flex;
+        align-items: center;
+        gap: 1em;
+        font-size: 0.8vw;
+        color: #000;
+
+        mat-icon {
+          width: 1vw;
+          height: auto;
+        }
+      }
+
+      .social {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2em;
+
+        mat-icon {
+          width: 8vw;
+          color: #0a66c2;
+          cursor: pointer;
+
+          &:hover{
+            transform: scale(1.05);
+          }
+        }
+      }
+    }
+
+    .photo {
+      position: relative;
+      display: inline-block;
+      background: #faf9fd;
+      width: 100%;
+      padding-top: 10px;
+      border: 1px solid var.$blue-color;
+      border-radius: 50%;
+      overflow: hidden;
+
+      img {
+        display: block;
+        width: -webkit-fill-available;
+        //mask-image: radial-gradient(circle at 60% 0%, black 70%, transparent 86%);
+        //mask-repeat: no-repeat;
+        //mask-position: center;
+        //mask-size: cover;
+      }
+    }
   }
 }
+
+@container (width < 430px) {
+  .card {
+    .header {
+
+      .name, .prof {
+        font-size: 1em;
+        transition: font-size 1.2s ease;
+      }
+    }
+  }
+}
+

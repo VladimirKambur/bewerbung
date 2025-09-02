@@ -1,0 +1,38 @@
+.booklet-container {
+  perspective: 2000px;
+  width: 50%;
+  height: 88%;
+  position: relative;
+
+  .first-page, .second-page, .third-page{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+
+    .booklet-cover, .cover-letter, .certificates, .technology-cover {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+    }
+
+    .cover-letter, .certificates{
+      transform: rotateY(180deg);
+    }
+  }
+
+  .first-page{
+    z-index: 2;
+  }
+  .third-page{
+    z-index: 1;
+  }
+}
+
+
+.page-content {
+  text-align: center;
+}
