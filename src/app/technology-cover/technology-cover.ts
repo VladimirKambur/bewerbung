@@ -13,6 +13,7 @@ import {MatCardModule} from '@angular/material/card';
 })
 export class TechnologyCover {
 
-  public icons : Array<string> = ["angular", "react", "docker", "flutter", "nginx", "typescript", "webstorm", "MongoDB", "oracle"];
+  public icons : Array<string> = ["angular", "react", "docker", "flutter", "nginx", "typescript", "webstorm",
+    "MongoDB", "oracle", "ionic", "capacitor", "nestjs", "nodejs", "dart"];
 
 }

@@ -6,11 +6,25 @@
   justify-content: center;
   overflow: hidden;
 
-  .booklet{
-    width: 60%;
-    //height: 100%;
+  .booklet, .classic-web{
     display: flex;
     align-items: center;
     justify-content: center;
   }
+
+  .booklet{
+    width: 60%;
+  }
+
+  .classic-web{
+    width: 80%;
+  }
+}
+
+.container-classic{
+  width: 70%;
+  height: 88%;
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
 }

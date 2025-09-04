@@ -2,13 +2,6 @@
 
 .card {
   container-type: inline-size;
-  /*background: linear-gradient(to right,
-    #faf9fd 0%,
-    #faf9fd 90%,
-    rgba(0, 0, 0, 0.01) 200%
-  );
-*/
-
   background: linear-gradient(to top left, var.$bg-grey 0%, var.$bg-white 60%, );
 
   .header {
@@ -45,6 +38,14 @@
         mat-icon {
           width: 1vw;
           height: auto;
+        }
+
+        @media screen and (max-width: 1320px) {
+          font-size: 2vw;
+
+          mat-icon{
+            width: 2vw;
+          }
         }
       }
 
@@ -87,6 +88,29 @@
       }
     }
   }
+
+  .actions {
+    margin-top: 2vh;
+    display: flex;
+    justify-content: center;
+
+    button{
+      background: var.$blue-color;
+    }
+  }
+
+  .letter {
+    margin-top: 4vh;
+    padding: 20px 0 0 20px;
+    font-size: 0.9vw;
+    line-height: 1.5;
+    border-top: 2px solid var.$blue-color;
+    border-left: 2px solid var.$blue-color;
+
+    @media screen and (max-width: 1320px) {
+      font-size: 2vw;
+    }
+  }
 }
 
 @container (width < 430px) {
@@ -97,6 +121,10 @@
         font-size: 1em;
         transition: font-size 1.2s ease;
       }
+    }
+
+    .letter {
+      font-size: 1.2em;
     }
   }
 }

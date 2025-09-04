@@ -14,6 +14,10 @@
     font-size: 1.2vw;
     font-weight: bold;
 
+    @media screen and (max-width: 1320px) {
+      font-size: 2vw;
+    }
+
     .button {
       cursor: pointer;
     }

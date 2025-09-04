@@ -1,11 +1,13 @@
 <mat-card class="cv-card" appearance="outlined">
   <mat-card-header class="header">
-    <div class="button" [class.active]="activeType() == type.JOB" (click)="setActiveType(type.JOB)">
-      Berufspraxis
-    </div>
-    <div class="button" [class.active]="activeType() == type.SCHOOL" (click)="setActiveType(type.SCHOOL)">
-      Bildungsweg
-    </div>
+    @if (!routeType) {
+      <div class="button" [class.active]="activeType() == type.JOB" (click)="setActiveType(type.JOB)">
+        Berufspraxis
+      </div>
+      <div class="button" [class.active]="activeType() == type.SCHOOL" (click)="setActiveType(type.SCHOOL)">
+        Bildungsweg
+      </div>
+    }
   </mat-card-header>
   <mat-card-content class="cv-content">
 
@@ -74,7 +76,7 @@
             <h3 class="title">Staatlich anerkannte Berufsfachschule für Industrietechnologen und
               technische Assistenten für Informatik in München
             </h3>
-            <div>Abschluss: Staatlich geprüfter Technischer Assistent für Informatik </div>
+            <div>Abschluss: Staatlich geprüfter Technischer Assistent für Informatik</div>
           </div>
         </div>
 

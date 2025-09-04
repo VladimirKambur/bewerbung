@@ -1,7 +1,8 @@
 <div class="menu">
-  <div class="button active" (click)="menuToggle.emit(0)">Anschreiben</div>
-  <div class="button" (click)="menuToggle.emit(1)">Lebenslauf</div>
-  <div class="button" (click)="menuToggle.emit(2)">Home</div>
-  <div class="button" (click)="menuToggle.emit(3)">Home</div>
+  <div class="button active" routerLink="/cl" routerLinkActive="active" >Motivationsschreiben</div>
+  <div class="button" routerLink="/cv/work" routerLinkActive="active" >Berufspraxis</div>
+  <div class="button" routerLink="/cv/educational" routerLinkActive="active" >Bildungsweg</div>
+  <div class="button" routerLink="/info/skills" routerLinkActive="active" >Fähigkeiten</div>
+  <div class="button" routerLink="/info/certificates" routerLinkActive="active" >Zeugnisse</div>
 </div>
 <div class="border"></div>

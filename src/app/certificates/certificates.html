@@ -1,46 +1,55 @@
 <mat-card class="card" appearance="outlined">
   <mat-card-header class="header">
-    <div class="close">
-      <mat-icon fontIcon="close" (click)="close.emit()"/>
-    </div>
-    <div class="button" [class.active]="activeType() == type.SKILLS" (click)="setActiveType(type.SKILLS)">
-      Fähigkeiten
-    </div>
-    <div class="button" [class.active]="activeType() == type.CERTIFICATE" (click)="setActiveType(type.CERTIFICATE)">
-      Zeugnisse
-    </div>
+    @if (!routeType) {
+      <div class="close">
+        <mat-icon fontIcon="close" (click)="close.emit()"/>
+      </div>
+      <div class="button" [class.active]="activeType() == type.SKILLS" (click)="setActiveType(type.SKILLS)">
+        Fähigkeiten
+      </div>
+      <div class="button" [class.active]="activeType() == type.CERTIFICATE" (click)="setActiveType(type.CERTIFICATE)">
+        Zeugnisse
+      </div>
+    }
   </mat-card-header>
   <mat-card-content class="card-content">
 
     @if (activeType() === type.SKILLS) {
       <div class="skill-container">
-        <div class="skill" style="--skill-level: 85%;">CSS</div>
-        <div class="skill" style="--skill-level: 95%;">HTML</div>
-        <div class="skill" style="--skill-level: 95%;">Angular</div>
-        <div class="skill" style="--skill-level: 75%;">React</div>
-        <div class="skill" style="--skill-level: 70%;">SPFX (SharePoint)</div>
+        <div class="label">IT</div>
+        <div class="skills">
+          <div class="skill" style="--skill-level: 85%;">CSS</div>
+          <div class="skill" style="--skill-level: 95%;">HTML</div>
+          <div class="skill" style="--skill-level: 95%;">Angular</div>
+          <div class="skill" style="--skill-level: 75%;">React</div>
+          <div class="skill" style="--skill-level: 70%;">SPFX (SharePoint)</div>
+        </div>
       </div>
 
       <div class="skill-container">
-        <div class="skill" style="--skill-level: 90%;">Jira</div>
-        <div class="skill" style="--skill-level: 90%;">Scrum</div>
+        <div class="label">Methodik</div>
+        <div class="skills">
+          <div class="skill" style="--skill-level: 90%;">Jira</div>
+          <div class="skill" style="--skill-level: 90%;">Scrum</div>
+        </div>
       </div>
 
       <div class="skill-container">
-        <div class="skill" style="--skill-level: 90%;">Deutsch</div>
-        <div class="skill" style="--skill-level: 60%;">Englisch</div>
-        <div class="skill" style="--skill-level: 100%;">Russisch</div>
+        <div class="label">Sprachen</div>
+        <div class="skills">
+          <div class="skill" style="--skill-level: 90%;">Deutsch</div>
+          <div class="skill" style="--skill-level: 60%;">Englisch</div>
+          <div class="skill" style="--skill-level: 100%;">Russisch</div>
+        </div>
       </div>
     } @else {
 
       <div class="company-icons">
         <mat-icon class="icon" svgIcon="tw" (click)="pdfDialog('assets/tw.pdf')"/>
-        <mat-icon class="icon" svgIcon="nova-capta" (click)="pdfDialog('/pdf/tw.pdf')"/>
+        <mat-icon class="icon" svgIcon="nova-capta" (click)="pdfDialog('assets/nc.pdf')"/>
         <mat-icon class="icon" svgIcon="f&f" (click)="pdfDialog('assets/f&f.pdf')"/>
-        <mat-icon class="icon" svgIcon="ihk" (click)="pdfDialog('/pdf/tw.pdf')"/>
+        <mat-icon class="icon" svgIcon="ihk" (click)="pdfDialog('assets/ihk.pdf')"/>
       </div>
-      <!--      <object class="pdf" [data]="safePdfUrl" type="application/pdf"></object>-->
-
     }
   </mat-card-content>
 </mat-card>

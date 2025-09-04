@@ -1,9 +1,14 @@
-
-<div class="container">
-  <!--<b-header (menuToggle)="rotateY($event)"></b-header>
-  <resume [activeCard]="currentIndex()"></resume>-->
-
-  <booklet class="booklet"/>
-</div>
-
-<router-outlet/>
+@if (isMobile()) {
+  @if (currentUrl() !== "/") {
+    <b-header (menuToggle)="rotateY($event)"></b-header>
+  }@else {
+    <div style="height: 71px"></div>
+  }
+  <div class="container-classic" >
+    <router-outlet/>
+  </div>
+} @else {
+  <div class="container">
+    <booklet class="booklet"/>
+  </div>
+}
