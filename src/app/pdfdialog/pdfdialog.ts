@@ -1,8 +1,8 @@
-import {Component, inject, OnInit, signal} from '@angular/core';
-import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
+import {Component, inject} from '@angular/core';
+import {MAT_DIALOG_DATA, MatDialogModule, MatDialogRef} from '@angular/material/dialog';
 import {HttpClient} from '@angular/common/http';
-import {DomSanitizer, SafeResourceUrl} from '@angular/platform-browser';
 import {NgxExtendedPdfViewerModule} from 'ngx-extended-pdf-viewer';
+import {MatIconModule} from '@angular/material/icon';
 
 export interface DialogData {
   url: string;
@@ -11,31 +11,18 @@ export interface DialogData {
 @Component({
   selector: 'pdfdialog',
   imports: [
-    NgxExtendedPdfViewerModule
+    NgxExtendedPdfViewerModule,
+    MatDialogModule,
+    MatIconModule,
   ],
   templateUrl: './pdfdialog.html',
   styleUrl: './pdfdialog.scss'
 })
-export class PDFDialog implements OnInit {
+export class PDFDialog  {
   readonly dialogRef = inject(MatDialogRef<PDFDialog>);
   readonly data = inject<DialogData>(MAT_DIALOG_DATA);
   readonly http = inject(HttpClient);
 
   fileUrl = this.data.url;
-
-  private sanitizer = inject(DomSanitizer);
-  safePdfUrl: SafeResourceUrl = this.sanitizer.bypassSecurityTrustResourceUrl(this.data.url);
-
-  objHeight = signal(0);
-
-  file: Blob | null = null;
-
-  ngOnInit(): void {
-    /*this.http.get(this.data.url, {
-      responseType: 'blob'
-    }).subscribe(blob => {
-      this.fileUrl = URL.createObjectURL(blob);
-    });*/
-  }
 
 }

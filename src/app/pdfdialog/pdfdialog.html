@@ -1,14 +1,20 @@
+<div class="header">
+  <mat-icon class="close" (click)="dialogRef.close()" fontIcon="close"/>
+</div>
+
 <div class="dialog">
 
   @if (fileUrl) {
     <ngx-extended-pdf-viewer
       [src]="fileUrl"
-      [height]="'90vh'"
+      [height]="'85vh'"
       backgroundColor="#ffffff"
       [handTool]="false"
+      [showToolbar]="false"
       zoom="page-width"
     >
     </ngx-extended-pdf-viewer>
   }
 
 </div>
+

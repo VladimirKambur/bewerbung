@@ -6,7 +6,10 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+
+    "gh-build": "ng build --configuration production --base-href \"https://vladimirkambur.github.io/bewerbung/\"",
+    "gh-deploy": "npx angular-cli-ghpages --dir=dist/bewerbung/browser"
   },
   "prettier": {
     "overrides": [

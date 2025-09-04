@@ -4,6 +4,13 @@
   container-type: inline-size;
   background: linear-gradient(to top left, var.$bg-grey 0%, var.$bg-white 60%, );
 
+  overflow-x: hidden;
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
   .header {
     margin-top: 4em;
     display: flex;
