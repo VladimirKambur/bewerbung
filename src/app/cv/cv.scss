@@ -51,7 +51,6 @@
       height: 100%;
 
 
-
       .info-card {
 
         padding: 10px 20px;
@@ -70,6 +69,23 @@
         .title {
           color: var.$blue-color;
           position: relative;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+
+          mat-icon {
+            margin-top: 20px;
+            height: auto;
+            width: 4vw;
+
+            @media screen and (max-width: 1320px) {
+              width: 8vw;
+            }
+
+            @media screen and (max-width: 700px) {
+              width: 16vw;
+            }
+          }
 
           &::before {
             content: "";

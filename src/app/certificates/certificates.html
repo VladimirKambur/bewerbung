@@ -1,6 +1,6 @@
 <mat-card class="card" appearance="outlined">
-  <mat-card-header class="header">
-    @if (!routeType) {
+  @if (!routeType) {
+    <mat-card-header class="header">
       <div class="close">
         <mat-icon fontIcon="close" (click)="close.emit()"/>
       </div>
@@ -10,8 +10,8 @@
       <div class="button" [class.active]="activeType() == type.CERTIFICATE" (click)="setActiveType(type.CERTIFICATE)">
         Zeugnisse
       </div>
-    }
-  </mat-card-header>
+    </mat-card-header>
+  }
   <mat-card-content class="card-content">
 
     @if (activeType() === type.SKILLS) {

@@ -1,8 +1,36 @@
-<div class="menu">
-  <div class="button active" routerLink="/cl" routerLinkActive="active" >Motivationsschreiben</div>
-  <div class="button" routerLink="/cv/work" routerLinkActive="active" >Berufspraxis</div>
-  <div class="button" routerLink="/cv/educational" routerLinkActive="active" >Bildungsweg</div>
-  <div class="button" routerLink="/info/skills" routerLinkActive="active" >Fähigkeiten</div>
-  <div class="button" routerLink="/info/certificates" routerLinkActive="active" >Zeugnisse</div>
-</div>
+@if (!isMobile) {
+  <div class="menu">
+    <div class="button" routerLink="/cl" routerLinkActive="active">Motivationsschreiben</div>
+    <div class="button" routerLink="/cv/work" routerLinkActive="active">Berufspraxis</div>
+    <div class="button" routerLink="/cv/educational" routerLinkActive="active">Bildungsweg</div>
+    <div class="button" routerLink="/info/skills" routerLinkActive="active">Fähigkeiten</div>
+    <div class="button" routerLink="/info/certificates" routerLinkActive="active">Zeugnisse</div>
+  </div>
+} @else {
+
+  <div class="menu-mobile ">
+    <button class="more_vert" matIconButton [matMenuTriggerFor]="menu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item routerLink="/cl" routerLinkActive="active">
+        <span>Motivationsschreiben</span>
+      </button>
+      <button mat-menu-item routerLink="/cv/work" routerLinkActive="active">
+        <span>Berufspraxis</span>
+      </button>
+      <button mat-menu-item routerLink="/cv/educational" routerLinkActive="active">
+        <span>Bildungsweg</span>
+      </button>
+
+      <button mat-menu-item routerLink="/info/skills" routerLinkActive="active">
+        <span>Fähigkeiten</span>
+      </button>
+      <button mat-menu-item routerLink="/info/certificates" routerLinkActive="active">
+        <span>Zeugnisse</span>
+      </button>
+    </mat-menu>
+  </div>
+}
+
 <div class="border"></div>

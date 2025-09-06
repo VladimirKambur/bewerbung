@@ -1,14 +1,15 @@
 <mat-card class="cv-card" appearance="outlined">
-  <mat-card-header class="header">
-    @if (!routeType) {
+  @if (!routeType) {
+    <mat-card-header class="header">
+
       <div class="button" [class.active]="activeType() == type.JOB" (click)="setActiveType(type.JOB)">
         Berufspraxis
       </div>
       <div class="button" [class.active]="activeType() == type.SCHOOL" (click)="setActiveType(type.SCHOOL)">
         Bildungsweg
       </div>
-    }
-  </mat-card-header>
+    </mat-card-header>
+  }
   <mat-card-content class="cv-content">
 
     @if (activeType() === type.JOB) {
@@ -18,7 +19,11 @@
         <div class="info-card">
           <div class="info">
             <div class="date">07/2023</div>
-            <h3 class="title">Mobile und Frontend Developer</h3>
+            <div class="title">
+              <h3>Mobile und Frontend Developer</h3><a href="https://teamware.de/" target="_blank">
+              <mat-icon svgIcon="tw"/>
+            </a>
+            </div>
             <ul>
               <li>Mobile Entwickler mit Flutter</li>
               <li>Frontend Developer ( Angular 8+, AngularJs, Scss, HTML, Typescript, JavaScript)</li>
@@ -29,7 +34,11 @@
         <div class="info-card">
           <div class="info">
             <div class="date">11/2016 <br> - <br>07/2023</div>
-            <h3 class="title">Mobile und Frontend Developer</h3>
+            <div class="title">
+              <h3>Mobile und Frontend Developer</h3><a href="https://www.novacapta.de/" target="_blank">
+              <mat-icon svgIcon="nova-capta"/>
+            </a>
+            </div>
             <ul>
               <li>
                 Hybrid mobile app mit DevExtreme, Angular, BreezJS, HTML, Css, TypeScript, Cordova
@@ -45,7 +54,11 @@
         <div class="info-card">
           <div class="info">
             <div class="date">08/2013<br> - <br>09/2016</div>
-            <h3 class="title">Fachinformatiker Anwendungsentwicklung </h3>
+            <div class="title">
+              <h3>Fachinformatiker Anwendungsentwicklung</h3> <a href="https://www.frevelundfey.de/" target="_blank">
+              <mat-icon svgIcon="f&f"/>
+            </a>
+            </div>
             <ul>
               <li>Software development mit Gupta 3.1 und 6.1 Webentwicklung mit C# MVC, JQuery, Ajax,
                 JavaScript, HTML, Css

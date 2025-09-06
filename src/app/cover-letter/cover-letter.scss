@@ -2,7 +2,7 @@
 
 .card {
   container-type: inline-size;
-  background: linear-gradient(to top left, var.$bg-grey 0%, var.$bg-white 60%, );
+  background: linear-gradient(to top left, var.$bg-grey 0%, var.$bg-white 60%,);
 
   overflow-x: hidden;
   overflow-y: scroll;
@@ -48,10 +48,18 @@
         }
 
         @media screen and (max-width: 1320px) {
-          font-size: 2vw;
+          font-size: 2.5vw;
 
-          mat-icon{
-            width: 2vw;
+          mat-icon {
+            width: 2.5vw;
+          }
+        }
+
+        @media screen and (max-width: 700px) {
+          font-size: 3vw;
+
+          mat-icon {
+            width: 3vw;
           }
         }
       }
@@ -68,8 +76,12 @@
           color: #0a66c2;
           cursor: pointer;
 
-          &:hover{
+          &:hover {
             transform: scale(1.05);
+          }
+
+          @media screen and (max-width: 1320px) {
+            width: 16vw;
           }
         }
       }
@@ -101,7 +113,7 @@
     display: flex;
     justify-content: center;
 
-    button{
+    button {
       background: var.$blue-color;
     }
   }
@@ -115,24 +127,13 @@
     border-left: 2px solid var.$blue-color;
 
     @media screen and (max-width: 1320px) {
-      font-size: 2vw;
+      font-size: 2.5vw;
+    }
+
+    @media screen and (max-width: 700px) {
+      font-size: 3.5vw;
     }
   }
 }
 
-@container (width < 430px) {
-  .card {
-    .header {
-
-      .name, .prof {
-        font-size: 1em;
-        transition: font-size 1.2s ease;
-      }
-    }
-
-    .letter {
-      font-size: 1.2em;
-    }
-  }
-}
 

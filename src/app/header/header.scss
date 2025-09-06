@@ -2,7 +2,7 @@
   height: 50px;
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 3vw;
   color: #E6F1FF;
 
   .button {
@@ -18,6 +18,21 @@
   .active {
     color: #fff;
     border-bottom: 1px solid #fff;
+  }
+}
+
+.menu-mobile{
+  height: 50px;
+  display: flex;
+  justify-content: flex-end;
+
+  .more_vert{
+    color: #E6F1FF;
+    align-self: flex-end;
+  }
+
+  mat-menu{
+    background: #454545;
   }
 }
 

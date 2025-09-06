@@ -7,6 +7,7 @@ import {
 import {MatCardModule} from '@angular/material/card';
 import {ActivatedRoute, ParamMap} from '@angular/router';
 import {takeUntilDestroyed} from '@angular/core/rxjs-interop';
+import {MatIconModule} from '@angular/material/icon';
 
 export enum TimelineType {
   JOB,
@@ -16,7 +17,8 @@ export enum TimelineType {
 @Component({
   selector: 'cv',
   imports: [
-    MatCardModule
+    MatCardModule,
+    MatIconModule
   ],
   templateUrl: './cv.html',
   styleUrl: './cv.scss'
