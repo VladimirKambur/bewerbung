@@ -1,4 +1,4 @@
-import {Component, DestroyRef, EventEmitter, inject, OnInit, Output, signal} from '@angular/core';
+import {Component, DestroyRef, EventEmitter, HostListener, inject, OnInit, Output, signal} from '@angular/core';
 import {MatCardModule} from '@angular/material/card';
 import {MatIconModule} from '@angular/material/icon';
 import {DomSanitizer} from '@angular/platform-browser';
@@ -30,11 +30,12 @@ export class Certificates implements OnInit {
   readonly route = inject(ActivatedRoute);
   private destroyRef = inject(DestroyRef);
 
+  private dialogMinWidth = 0;
+
   public routeType: string | null = null;
 
   type = CertificatesType;
   public activeType = signal(CertificatesType.SKILLS);
-
 
   ngOnInit(): void {
     this.route.paramMap.pipe(takeUntilDestroyed(this.destroyRef)).subscribe((params: ParamMap) => {
@@ -43,12 +44,29 @@ export class Certificates implements OnInit {
         this.activeType.set(this.routeType === 'skills' ? this.type.SKILLS : this.type.CERTIFICATE);
       }
     });
+
+    this.getDialogMinWidth(window.innerWidth);
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onRezise(e: any) {
+    this.getDialogMinWidth(e.target.innerWidth);
+  }
+
+  private getDialogMinWidth(innerWidth: number) {
+    if(innerWidth < 1320) {
+      this.dialogMinWidth = 70;
+    }else if(innerWidth < 700) {
+      this.dialogMinWidth = 95;
+    }else{
+      this.dialogMinWidth = 50;
+    }
   }
 
   pdfDialog(pdfUrl: string) {
     const dialogRef = this.dialog.open(PDFDialog, {
       data: {url: pdfUrl},
-      minWidth: '50vw',
+      minWidth: this.dialogMinWidth + 'vw',
       height: '90vh'
     });
   }
